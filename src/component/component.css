@@ -66,12 +66,10 @@
 }
 
 .page-item {
-	border: 1px solid black;
-	padding: 10px;
-	cursor: pointer;
+	padding: 3px;
 }
 
-.navigation .page-item a {
+.navigation .page-item button{
 	cursor: pointer;
     text-decoration: none;
 }

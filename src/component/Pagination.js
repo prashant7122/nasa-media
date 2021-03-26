@@ -12,7 +12,7 @@ const Pagination = ({ imagesPerPage, totalImages, paginate }) => {
 			<div className="navigation">
 				{pageNumbers.map((number) => (
 					<span key={number} className="page-item">
-						<a onClick={() => paginate(number)} href="#">{number}</a>
+						<button onClick={() => paginate(number)} >{number}</button>
 					</span>
 				))}
 			</div>
