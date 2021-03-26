@@ -5,7 +5,6 @@ import "./App.css";
 import ResultList from "./component/ResultList";
 
 function App() {
-	const apiKey = "5Old9fnvQ1fECDVuA7KmGGdISehfq8I1jJLRONPa";
 	const [input, setInput] = useState("");
 	const [images, setImages] = useState([]);
 	const [loading, setLoading] = useState(false);

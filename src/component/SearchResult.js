@@ -10,7 +10,7 @@ const SearchResult = ({ item, loading }) => {
 		<>
 			<div className="search-result">
 				<div className="search-result-image">
-					{item.links && <img src={`${item.links[0].href}`} />}
+					{item.links && <img src={`${item.links[0].href}`} alt={`${item.links[0].href}`} />}
 				</div>
 				<div className="search-result-title">
 					<span>{item.data[0].title}</span>
