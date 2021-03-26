@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter, Redirect, Route } from "react-router-dom";
+import NasaPhoto from "./component/NasaPhoto";
+import "./App.css";
+import ResultList from "./component/ResultList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const apiKey = "5Old9fnvQ1fECDVuA7KmGGdISehfq8I1jJLRONPa";
+	const [input, setInput] = useState("");
+	const [images, setImages] = useState([]);
+	const [loading, setLoading] = useState(false);
+
+	return (
+		<BrowserRouter>
+			<div>
+				<Route path="/">
+					<Redirect to="/nasaphoto" />
+				</Route>
+				<Route exact path="/home">
+					<Redirect to="/nasaphoto" />
+				</Route>
+				<Route
+					render={() => (
+						<NasaPhoto
+							input={input}
+							setInput={setInput}
+							setLoading={setLoading}
+							setImages={setImages}
+						/>
+					)}
+					path="/nasaphoto"
+				/>
+				<Route
+					render={() => (
+						<ResultList
+							input={input}
+							loading={loading}
+							setLoading={setLoading}
+							images={images}
+							setImages={setImages}
+						/>
+					)}
+					path="/resultlist"
+				/>
+			</div>
+		</BrowserRouter>
+	);
 }
 
 export default App;

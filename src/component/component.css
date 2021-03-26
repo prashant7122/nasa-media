@@ -1,0 +1,76 @@
+.header h1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 700;
+	margin-bottom: 0px;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	margin: 0px 48px;
+}
+
+.title .search input {
+	margin: 12px;
+}
+.image {
+	display: flex;
+	flex-direction: column;
+	margin: 16px 48px;
+}
+.image img {
+	height: 60vh;
+}
+.image h4 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px;
+}
+.title .search {
+	margin: 24px;
+}
+.search-result {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 16px;
+}
+.search-result-image img {
+	height: 200px;
+	width: 200px;
+}
+.search-result-title {
+	display: flex;
+	flex-direction: column;
+	margin: 16px;
+}
+.home-redirect {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(199, 197, 197);
+}
+.home-redirect a {
+	text-decoration: none;
+	font-size: xxx-large;
+	font-weight: bolder;
+	font-style: italic;
+}
+.navigation {
+	display: flex;
+	flex-direction: row;
+	margin: 16px;
+}
+
+.page-item {
+	border: 1px solid black;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.navigation .page-item a {
+	cursor: pointer;
+}
